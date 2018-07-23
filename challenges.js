@@ -5,17 +5,46 @@ task: make a function that determines which number is largest
 input: 4, 12, 2
 output: 12
 */
-fuction findLargestNumber( num1, num2, num3 ){
-	
+function findLargestNumber(num1, num2, num3) {
+	if (num1 > num2 && num1 > num3) {
+		return num1;
+	}
+	if (num2 > num3 && num2 > num1) {
+		return num2;
+	}
+	if (num3 > num1 && num3 > num2) {
+		return num3;
+	}
 }
+
+console.log("this is the largest number", findLargestNumber(4, 12, 2));
+
 /*
 task: make a function that, given 3 strings, returns which string is longest
 input: 'stuff', 'hi', 'woohoo'
 output: 'woohoo'
 */
-function findLongestWord( word1, word2, word3){
-
+function findLongestWord(word1, word2, word3) {
+	var longestWord = null;
+	if (word1.length > word2.length) {
+		if (word1.length > word3.length) {
+			longestWord = word1 + " word1 is the longest word ";
+			return longestWord;
+		}
+	}
+	if (word2.length > word3.length) {
+		longestWord = word2 + " word2 is the longest string ";
+		return longestWord;
+	}
+	else {
+		longestWord = word3 + ' word3 is the longest word';
+		return longestWord;
+	}
 }
+
+console.log(findLongestWord("horse", "rhinoceros", "cat"));
+console.log(findLongestWord("horse", "bowl", "cat"));
+
 
 /*
 DETERMINE EVEN DIBIBILITY
@@ -28,9 +57,23 @@ output: true
 input: 5, 2
 output: false
 */
-function determineEvenDivisibility( num1, num2 ){
-	
+function determineEvenDivisibility(num1, num2) {
+	if (num1 % num2 === 0) {
+		return true;
+	}
+	if (num1 % num2 != 0) {
+		return false;
+	}
 }
+
+console.log('determine even 10, 2 ', determineEvenDivisibility(10, 2));
+console.log('determine even 5,2', determineEvenDivisibility(5, 2));
+
+
+// Build a function that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
+
+// - Write a function that takes no parameters
+// - The function should output the numbers 1 through 100, following the rules from above
 
 /*
 CHECK FIRST LETTER CAPITLIZED
@@ -42,7 +85,7 @@ output: true
 input: 'fruit'
 output: false
 */
-function checkFirstLetterCapitalized( word ){
+function checkFirstLetterCapitalized(word) {
 
 }
 
@@ -67,10 +110,16 @@ REVERSE STRING
 task: make a fuction that uses loops to reverse a string
 input: 'greetings earthlings'
 output: 'sgnilhtrae sgniteerg' 
-*/
-function reverseString( string ){
-
+// */
+function reverseString(string) {
+	var newString = ''; 
+	for (var i = string.length - 1; i > 0 ; i--) {
+		newString = newString + [string[i]]
+	}
+	return newString;
 }
+
+console.log("reverse string", reverseString('greetings earthlings'));
 
 /*
 CALCULATE FACTORIAL
@@ -79,9 +128,9 @@ task: calculate the factorial of a number
 input: 5
 output: 120   (5*4*3*2*1)
 */
-function calculateFactorial( number ){
+// function calculateFactorial(number) {
 
-}
+// }
 
 /*
 FIND LONGEST WORD IN ARRAY
@@ -89,9 +138,9 @@ task: given an array of words, determine which one is the longest and returns it
 input: ['great','days','hi']
 output: 'great'
 */
-function findLongestWordInArray( wordArray ){
+// function findLongestWordInArray(wordArray) {
 
-}
+// }
 
 /*
 EVERY OTHER LETTER
@@ -103,9 +152,9 @@ output: 'ilns'
 input: 'mistermister'
 output: 'itritr'
 */
-function getEveryOtherLetter( string ){
+// function getEveryOtherLetter(string) {
 
-}
+// }
 
 /*
 ALPHABETIZE LETTERS
@@ -117,9 +166,9 @@ output: 'aahllmmorsw'
 input: 'tuba'
 output: 'abtu'
 */
-function alphabetizeLetters( string ){
+// function alphabetizeLetters(string) {
 
-}
+// }
 
 
 
