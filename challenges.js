@@ -57,6 +57,7 @@ output: true
 input: 5, 2
 output: false
 */
+
 function determineEvenDivisibility(num1, num2) {
 	if (num1 % num2 === 0) {
 		return true;
@@ -70,7 +71,13 @@ console.log('determine even 10, 2 ', determineEvenDivisibility(10, 2));
 console.log('determine even 5,2', determineEvenDivisibility(5, 2));
 
 
-// Build a function that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
+// Build a function that prints the numbers from 1 to 100. But for multiples of three print “Fizz” 
+// instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples 
+// of both three and five print “FizzBuzz”.
+
+
+
+
 
 // - Write a function that takes no parameters
 // - The function should output the numbers 1 through 100, following the rules from above
@@ -93,47 +100,45 @@ function checkFirstLetterCapitalized(word) {
 		if (word[i] == word[i].toLowerCase()) {
 			return false;
 		}
-
 	}
-
-
 }
 
 console.log("this has something in uppercase,", checkFirstLetterCapitalized('Fruit'));
 
-function reverseString(str) {
-	// Step 1. Use the split() method to return a new array
-	var splitString = str.split(""); // var splitString = "hello".split("");
-	// ["h", "e", "l", "l", "o"]
 
-	// Step 2. Use the reverse() method to reverse the new created array
-	var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
-	// ["o", "l", "l", "e", "h"]
-
-	// Step 3. Use the join() method to join all elements of the array into a string
-	var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
-	// "olleh"
-
-	//Step 4. Return the reversed string
-	return joinArray; // "olleh"
+function reverseString(string){ 
+	var splitString = string.split(""); 
+	var reverseArray = splitString.reverse(); 
+	var joinedArray = reverseArray.join(); 
+	return joinedArray; 
 }
 
 console.log(reverseString("hello")); 
 
-/*
-CHECK OUTSIDE LETTERS
-task: make a function that determines if the first and last letter of a string are the same letter
-----
-input: 'sisters',
-output: true
-----
-input: 'mister',
-output: false
-/*
+
+// CHECK OUTSIDE LETTERS
+// task: make a function that determines if the first and last letter of a string are the same letter
+// ----
+// input: 'sisters',
+// output: true
+// ----
+// input: 'mister',
+// output: false
+
+
 function checkOutsideLetters( word ){
-	
+		var firstLetter= word[0]; 
+		var lastLetter = word[word.length-1]; 
+		if (firstLetter === lastLetter){
+			return true; 
+		}
+		else{
+			return false; 
+		}
 }
 
+console.log(checkOutsideLetters("bottom"), "bottom"); 
+console.log(checkOutsideLetters('sisters'), "sisters"); 
 
 /* WEEK 2 */
 /*
@@ -152,6 +157,21 @@ function reverseString(string) {
 
 console.log("reverse string", reverseString('greetings earthlings'));
 
+// find the odd numbers between two numbers and push them to a new array 
+function findOddNumbers(k,l){
+	var oddNumbers=[]; 
+	for ( var i = k; i <= l ; i++ ){
+		if( i % 2 != 0 ){
+			oddNumbers.push(i); 
+		}
+	}
+	return oddNumbers; 
+}
+
+console.log("this is the function to find oddNumbers", findOddNumbers(2,5)); 
+console.log("this is the function to find oddNumbers", findOddNumbers(41,61)); 
+console.log(" this is the second function to find the odd numbers between two numbers", findOddNumbers(6,40)); 
+
 /*
 CALCULATE FACTORIAL
 task: calculate the factorial of a number
@@ -160,8 +180,24 @@ input: 5
 output: 120   (5*4*3*2*1)
 */
 // function calculateFactorial(number) {
-
+// 	var factorial = number; 
+//   for ( var x = number; x >= number ; x--){
+	
+//   }
 // }
+
+// I COULD NOT GET THIS ONE ON MY OWN FOUND ON MEDIUM
+function factorialize(num) {
+	if (num < 0) 
+		  return -1;
+	else if (num == 0) 
+		return 1;
+	else {
+		return (num * factorialize(num - 1));
+	}
+  }
+  factorialize(5);
+
 
 /*
 FIND LONGEST WORD IN ARRAY
@@ -204,7 +240,6 @@ function alphabetizeLetters(string) {
 	}
 	newArray.sort(); 
 	var newString = newArray.join(''); 
-	// newArray.join(); 
 	return newString; 
 }
 
@@ -238,10 +273,25 @@ function combineArrays( firstNames, lastNames){
         consonants = consonants + 1 ; 
         }
     }
-    return "vowels:" + vowels +  "consonants:" + consonants; 
+    return "vowels:" + vowels + " and "+ "consonants:" + consonants; 
 }
 
 console.log( countLetters("word")); 
 console.log( countLetters("elephant")); 
 
+function translate(string){
+    var stringArray = string.split(" ");
+    var pigLatinArray=[]; 
+    var arrayIndex=''; 
+    for( var i=0; i < stringArray.length; i++){
+        arrayIndex=stringArray[i].slice(1,stringArray[i].length); 
+        arrayIndex = arrayIndex + stringArray[i][0] + "ay"; 
+        pigLatinArray.push(arrayIndex);         
+    }   
+    var newArray = pigLatinArray.join(); 
+    return newArray;  
+}
 
+
+console.log(translate(string)); 
+console.log("pig latin string", translate("Hello my name is Stu"));
