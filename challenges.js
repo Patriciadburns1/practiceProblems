@@ -279,4 +279,19 @@ function combineArrays( firstNames, lastNames){
 console.log( countLetters("word")); 
 console.log( countLetters("elephant")); 
 
+function translate(string){
+    var stringArray = string.split(" ");
+    var pigLatinArray=[]; 
+    var arrayIndex=''; 
+    for( var i=0; i < stringArray.length; i++){
+        arrayIndex=stringArray[i].slice(1,stringArray[i].length); 
+        arrayIndex = arrayIndex + stringArray[i][0] + "ay"; 
+        pigLatinArray.push(arrayIndex);         
+    }   
+    var newArray = pigLatinArray.join(); 
+    return newArray;  
+}
 
+
+console.log(translate(string)); 
+console.log("pig latin string", translate("Hello my name is Stu"));
