@@ -1,10 +1,9 @@
-/* WEEK 1 */
-/*
-FIND LARGEST NUMBER
-task: make a function that determines which number is largest
-input: 4, 12, 2
-output: 12
-*/
+// FIND LARGEST NUMBER
+// task: make a function that determines which number is largest
+// input: 4, 12, 2
+// output: 12
+// */
+
 function findLargestNumber(num1, num2, num3) {
 	if (num1 > num2 && num1 > num3) {
 		return num1;
@@ -140,13 +139,12 @@ function checkOutsideLetters( word ){
 console.log(checkOutsideLetters("bottom"), "bottom"); 
 console.log(checkOutsideLetters('sisters'), "sisters"); 
 
-/* WEEK 2 */
-/*
-REVERSE STRING
-task: make a fuction that uses loops to reverse a string
-input: 'greetings earthlings'
-output: 'sgnilhtrae sgniteerg' 
-// */
+
+// REVERSE STRING
+// task: make a fuction that uses loops to reverse a string
+// input: 'greetings earthlings'
+// output: 'sgnilhtrae sgniteerg' 
+// // */
 function reverseString(string) {
 	var newString = '';
 	for (var i = string.length; i >= 0; i--) {
