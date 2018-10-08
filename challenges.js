@@ -294,3 +294,109 @@ function translate(string){
 
 
 console.log("pig latin string", translate("Hello my name is Stu"));
+
+
+/*
+Given a string, output that string with every letter capitalized
+EXCEPT the first and last letters
+for example: 
+input:
+   stuff
+   
+ output:
+   sTUFf
+*/
+
+function mountainCase(string) {
+
+}
+
+/*
+Determine whether or not the given string can be formed into a palindrome:
+input:
+  'rcearca'  (mix up of racecar, which is a palindrome)
+output:
+  true
+*/
+
+function findPossiblePalindrome( letters ) {
+
+}
+
+/*
+Given 2 numbers, divide the first number by the second
+and then output the number with commas put in the appropriate place
+for example: 
+input: 
+  1054204
+  2
+output: 
+  '527,102'
+*/
+function divideAndFormat(dividend, divisor) {
+  
+}
+
+/*
+Given 2 strings, return a string with the difference between the longest and the shortest
+input: 
+    "corrupted"
+    "carrumba
+output:
+    'opted'
+*/
+function hashDifference(firstString, secondString) {
+
+}
+/*
+Given a string, output that string with every letter capitalized
+EXCEPT the first and last letters
+for example: 
+input:
+   stuff
+   
+ output:
+   sTUFf
+*/
+
+function mountainCase(string) {
+
+}
+
+/*
+Determine whether or not the given string can be formed into a palindrome:
+input:
+  'rcearca'  (mix up of racecar, which is a palindrome)
+output:
+  true
+*/
+
+function findPossiblePalindrome( letters ) {
+
+}
+
+/*
+Given 2 numbers, divide the first number by the second
+and then output the number with commas put in the appropriate place
+for example: 
+input: 
+  1054204
+  2
+output: 
+  '527,102'
+*/
+function divideAndFormat(dividend, divisor) {
+  
+}
+
+/*
+Given 2 strings, return a string with the difference between the longest and the shortest
+input: 
+    "corrupted"
+    "carrumba
+output:
+    'opted'
+*/
+function hashDifference(firstString, secondString) {
+
+}
